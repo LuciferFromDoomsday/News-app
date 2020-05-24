@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		842A1B8824753ED500658120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842A1B8624753ED500658120 /* LaunchScreen.storyboard */; };
 		842A1B9324753ED500658120 /* News_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A1B9224753ED500658120 /* News_appTests.swift */; };
 		842A1B9E24753ED500658120 /* News_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A1B9D24753ED500658120 /* News_appUITests.swift */; };
+		842A1BAD24766DE600658120 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 842A1BAC24766DE600658120 /* SwiftyJSON */; };
+		842A1BB02476723A00658120 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 842A1BAF2476723A00658120 /* SDWebImageSwiftUI */; };
+		842A1BB324798C4E00658120 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 842A1BB224798C4E00658120 /* SwiftUIPullToRefresh */; };
+		842A1BB52479B29900658120 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A1BB42479B29900658120 /* ImageCaching.swift */; };
+		842A1BB72479B31100658120 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A1BB62479B31100658120 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,8 @@
 		842A1B9924753ED500658120 /* News appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A1B9D24753ED500658120 /* News_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_appUITests.swift; sourceTree = "<group>"; };
 		842A1B9F24753ED500658120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842A1BB42479B29900658120 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
+		842A1BB62479B31100658120 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842A1BB02476723A00658120 /* SDWebImageSwiftUI in Frameworks */,
+				842A1BAD24766DE600658120 /* SwiftyJSON in Frameworks */,
+				842A1BB324798C4E00658120 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,8 @@
 				842A1B8624753ED500658120 /* LaunchScreen.storyboard */,
 				842A1B8924753ED500658120 /* Info.plist */,
 				842A1B8324753ED500658120 /* Preview Content */,
+				842A1BB42479B29900658120 /* ImageCaching.swift */,
+				842A1BB62479B31100658120 /* URLImage.swift */,
 			);
 			path = "News app";
 			sourceTree = "<group>";
@@ -152,6 +164,11 @@
 			dependencies = (
 			);
 			name = "News app";
+			packageProductDependencies = (
+				842A1BAC24766DE600658120 /* SwiftyJSON */,
+				842A1BAF2476723A00658120 /* SDWebImageSwiftUI */,
+				842A1BB224798C4E00658120 /* SwiftUIPullToRefresh */,
+			);
 			productName = "News app";
 			productReference = 842A1B7824753ED000658120 /* News app.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +241,11 @@
 				Base,
 			);
 			mainGroup = 842A1B6F24753ED000658120;
+			packageReferences = (
+				842A1BAB24766DE600658120 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				842A1BAE2476723900658120 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				842A1BB124798C4E00658120 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+			);
 			productRefGroup = 842A1B7924753ED000658120 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				842A1B7C24753ED000658120 /* AppDelegate.swift in Sources */,
+				842A1BB52479B29900658120 /* ImageCaching.swift in Sources */,
 				842A1B7E24753ED000658120 /* SceneDelegate.swift in Sources */,
+				842A1BB72479B31100658120 /* URLImage.swift in Sources */,
 				842A1B8024753ED000658120 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +612,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		842A1BAB24766DE600658120 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		842A1BAE2476723900658120 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		842A1BB124798C4E00658120 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/SwiftUI-PullToRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		842A1BAC24766DE600658120 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 842A1BAB24766DE600658120 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		842A1BAF2476723A00658120 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 842A1BAE2476723900658120 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		842A1BB224798C4E00658120 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 842A1BB124798C4E00658120 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 842A1B7024753ED000658120 /* Project object */;
 }
